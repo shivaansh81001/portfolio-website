@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivaansh Bhatia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- downward button -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{% static 'website/style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="nav-bar">
+            
+            <button class="hire-me" onclick="connect()">CONNECT</button>
+            <div class="options">
+                <ul class="nav-options">
+                    <li class="link home-btn"><a href="#" onclick="click_home()"><i class="fa-solid fa-house"></i></a></li>
+                    <li class="link resume"><a href="/assets/resume.pdf" rel="noopener noreferrer" target="_blank">RESUME</a></li>
+                    <li class="link projects"><a href="#" onclick="click_projects()">PROJECTS</a></li>
+                    <li class="link gallery"><a href="#" onclick="click_gallery()">GALLERY</a></li>
+                    <li class="link about"><a href="#" onclick="about_click()">ABOUT</a></li>
+                    
+                    
+                </ul>
+            
+            </div>
+            <div class="nav-title"></div>    
+        </div>
+        <div class="projects_screen">
+            <div class="project-text">
+                <p></p>
+            </div>
+            <div class="projects-container">
+                <div class="card" id="stc-mgt" onclick="project_github(this)">
+                    <div class="card-pic stock-mngt">
+                        <img src="/assets/stock_management.png" alt="">
+                    
+                    </div>
+                    <div class="card-title">
+                        <h3>Stock Management</h3>
+                    </div>
+                    <div class="card-desc">
+                        <p class="desc-p1">The software designed for small businesses streamlines stock tracking and sales through role-based access and advanced order management. This ensures that employees have suitable access rights while simplifying the entire order lifecycle from initiation to completion.</p>
+                        <br>
+                        <p class="desc-p2">Additionally, the platform includes comprehensive admin tools for user and product management and integrates unique billing identifiers in the POS system for efficient tracking. This leads to improved operational efficiency and customer service by minimizing errors and enhancing the checkout process.</p>
+
+                        </div>
+                </div>
+                <div class="card " id="git-tab" onclick="project_github(this)">
+                    <div class="card-pic github-gen">
+                        <img src="/assets/table_gen.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <h3>GitHub README Table Automation</h3>
+                    </div>
+                    <div class="card-desc">
+                        <p class="desc-p1">A Python script was developed to automate the updating of README files in GitHub repositories, incorporating markdown tables to list file names. This script utilizes GitHub's RESTful API to dynamically retrieve file structures and update READMEs, significantly streamlining the documentation process and ensuring that repository overviews remain current.</p>
+                        <br>
+                        <p class="desc-p2">The script is characterized by clean and descriptive coding practices, employing well-defined functions to reduce redundancy. This approach not only improves code maintainability but also enhances the overall efficiency of the documentation workflow, leading to more organized and up-to-date repositories.</p>
+                    </div>
+                </div>
+                <div class="card" id="multi-agent" onclick="project_github(this)">
+                    <div class="card-pic agent=pathfinding">
+                        <img src="/assets/mapf.png" alt="">
+                    
+                    </div>
+                    <div class="card-title">
+                        <h3>AI multi-agent pathfinding</h3>
+                    </div>
+                    <div class="card-desc">
+                        <p class="desc-p1">The software designed for small businesses streamlines stock tracking and sales through role-based access and advanced order management. This ensures that employees have suitable access rights while simplifying the entire order lifecycle from initiation to completion.</p>
+                        <br>
+                        <p class="desc-p2">Additionally, the platform includes comprehensive admin tools for user and product management and integrates unique billing identifiers in the POS system for efficient tracking. This leads to improved operational efficiency and customer service by minimizing errors and enhancing the checkout process.</p>
+
+                        </div>
+                </div>
+                <div class="card" id="wld-flg" onclick="project_github(this)">
+                    <div class="card-pic world-flag">
+                        <img src="/assets/flag_quiz.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <h3>Flag Quiz Game</h3>
+                    </div>
+                    <div class="card-desc">
+                        <p class="desc-p1">A Python-based educational game was developed using Pygame, focusing on testing and enhancing players' knowledge of global flags. The aim was to create an interactive learning experience that also serves as a tool for assessing geographical knowledge. This approach introduces a fun and engaging method to learn about different countries and their flags.</p>
+                        <br>
+                        <p class="desc-p2">The game features a graphical user interface (GUI) for intuitive gameplay and offers multiple difficulty levels to cater to various learning stages, providing progressive learning challenges. Additionally, it includes a summary report feature that showcases scores, incorrect responses, and correct answers, enabling players to self-evaluate and track their progress in learning global flags.</p>
+                    </div>
+                </div>
+                <div class="card" id="prd-tab" onclick="project_github(this)">
+                    <div class="card-pic periodic-table">
+                        <img src="/assets/periodic_table.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <h3>Periodic Table</h3>
+                    </div>
+                    <div class="card-desc">
+                        <p class="desc-p1">An interactive software version of the modern Periodic Table was created to serve as an engaging educational tool. Developed using Java, SQL, MySQL, and JDBC, this project presents the Mendeleev Periodic Table in a user-friendly digital format. The primary goal is to assist users in learning and retaining information about chemical elements through interactive exploration and assessment.</p>
+                        <br>
+                        <p class="desc-p2">The software delivers instant data retrieval on elements, allowing users to customize views by group and period, enhancing the learning experience. Additionally, it features a quiz module designed to test user knowledge, further aiding in the educational process and making the study of the Periodic Table more interactive and effective.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="description">
+                <p class="greet">
+                    HELLO, MY NAME IS 
+                </p>
+                <p class="name">&lt;SHIV&gt;</p>
+                <div class="desc_up"><a href="#" onclick="desc_up()"><i class="fa-solid fa-angles-up"></i></a></div>
+                <div class="desc">
+                    <p>I was raised in India, where I also received my primary and secondary education. From a young age, I found myself fascinated by science and computer technology.  </p>
+                    <br>
+                    <p>Fueled by the consistent support and encouragement from my teachers, peers, and family, I made the conscious decision to transform this growing interest into a professional career path by moving to Canada for studies.</p>
+                    <br>
+                    <p >As a dedicated <span class="word">Full-Stack Software Developer in training</span>,
+                    I am currently advancing my education at the University of Alberta. </p><br>
+                    <br>
+                    <p >I am actively seeking opportunities to engage in research and
+                    secure internships that will allow me to contribute to and expand 
+                    my expertise within the field.</p>
+                </div>
+                <div class="desc_2">
+                    <p>I am dedicated to continuously expanding my skill set in various domains, particularly emphasizing programming and logic.</p> 
+                    <br>
+                    <p>While I also delve into digital art and photography, for which you can find more information on my <a href="https://github.com/shivaansh81001" class="word" target="_blank" rel="noopener noreferrer"><u>GitHub page</u><i class="fa-solid fa-link"></i></a>, my primary focus has been on enhancing my programming and technological skills in recent years.</p>
+                    </p>
+                    <p>Below are several of the <span class="word">technologies</span> I am proficient in:</p>
+                    <br>
+                    <table>
+                        <tr>
+                            <td><li>Python</li></td>
+                            <td><li>SQL</li></td>
+                            <td><li>MongoDB</li></td>
+                        </tr>
+                        <tr>
+                            <td><li>React</li></td>
+                            <td><li>RestAPIs</li></td>
+                            <td><li>NodeJs</li></td>
+                        </tr>
+                        <tr>
+                            <td><li>HTML</li></td>
+                            <td><li>CSS</li></td>
+                            <td><li>JavaScript</li></td>
+                        </tr>
+                        
+                    </table>
+                    <br>
+                    <p>As my studies advance, I am delving into the realm of artificial intelligence, focusing on areas such as AI models, reinforcement learning, various regression techniques, and large language models (LLMs).</p>
+                    <br>
+                    <p class="connect_note">Please do not hesitate to reach out via email for any inquiries, suggestions, or if you simply wish to engage in conversation by clicking on the <span class="word">"Connect"</span>button on top left corner. </p>
+                </div>
+                <div class="desc_down"><a href="#" onclick="desc_down()"><i class="fa-solid fa-angles-down"></i></a></div>
+            </div>
+            
+            <div class="picture">
+                <img src="/assets/profile_pic.png" alt="pp">
+            </div>     
+            
+            <div class="socials">
+                <ul class="social-links">
+                    <li class="social-link linkedin"><a href="https://www.linkedin.com/in/shivaansh81001/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li class="social-link github"><a href="https://github.com/shivaansh81001" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="social-link instagram" ><a href="https://www.instagram.com/clicks_happen/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="social-link gmail"><a href="mailto:shivaanshbhatia007@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-envelope"></i></a></li>
+                    <li class="social-link youtube"><a href="https://www.youtube.com/channel/UC7LFxHwlYT5vyGVd6A4QFVA" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+                
+            </div>
+        </div>
+        
+    </div>
+    <script src="{% static 'website/app.js' %}"></script>
+</body>
+</html>

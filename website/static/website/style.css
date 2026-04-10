@@ -1,0 +1,530 @@
+*{
+
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+body, html { 
+    overflow: hidden;
+}
+
+body{
+    
+    background-image: url('assets/bg_bgmain.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+}
+
+
+@media (max-width: 600px) {
+    .name p{
+        font-size: 10rem;
+    }
+    .description{
+        width: 15rem;
+    }
+  }
+  
+@media (min-width: 601px) {
+body {
+    font-size: 16px;
+}
+}
+    
+
+.main{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease;
+    transform: translateY(-100%);    
+    overflow: hidden;
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+
+
+.nav-bar{   
+    display: flex;
+    margin: auto;
+    position: relative;
+    height: 10vh;
+    width: 100vw;
+    padding:2rem;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.options{
+    align-items: center;
+    display: flex;
+    position: relative;
+    gap: 7rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    
+}
+
+.nav-options{
+    bottom: 1rem;
+    position: relative;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+    
+}
+
+.link a{
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.link a::after{
+    content: "";
+    position: absolute;
+    top: 70%;
+    height: 2px;
+    width: 0;
+    left:0;
+    background-color: #56d6b0;
+    transition: all 0.2s ease;
+}
+
+.link a:hover::after{
+    width: 70%;
+}
+
+.link a.active:after {
+    content: "";
+    position: absolute;
+    top: 70%;
+    height: 2px;
+    width: 70%; /* Make sure this matches the width in your hover effect */
+    left: 0;
+    background-color: #56d6b6;
+    transition: all 0.2s ease;
+}
+
+
+.hire-me{
+    display: flex;
+    position: relative;
+    background-color: transparent;
+    border: 2px solid #56d6b0;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    top: 0.5rem;
+    left: 3rem;
+    clip-path: polygon(0% 0%,80% 0%, 100% 20%,100% 100%, 20%, 100%,0% 80%);
+
+    
+}
+
+.hire-me:hover{
+    transition:  0.2s ease all;
+    background-color: #56d6b0;
+    color: white;
+    cursor: pointer;
+    text-shadow: 0 0 20px white;
+    box-shadow: 0 0 20px #56d6b0;
+}
+
+
+.nav-title{
+    display: flex;
+    color: white;
+    position: relative;
+    font-weight: 200;
+    font-size: 1.75rem;
+    margin-left: 20px;
+    word-spacing: 1.25rem;
+    visibility: hidden;
+}
+
+
+
+.projects_screen{
+    display: flex;
+    position: relative;
+    visibility: visible;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(-150%);
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 1s ease;
+    overflow: hidden;
+   
+}
+
+.project-text{
+    display: flex;
+    background-color: white;
+    height: auto;
+
+}
+
+.projects-container{
+    display: flex;
+    position: relative;
+    /* background-color: white; */
+    overflow-y: scroll;
+    bottom: 10rem;
+    width: fit-content;
+    height: fit-content;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    margin-top: 10rem;
+    position: relative;
+    background-color: rgb(36, 36, 36);
+    margin: 5rem;
+    height: 20rem;
+    width: 65rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 3rem black;
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    scale: 1.01;
+    box-shadow: 0 0rem 4rem #56d6b0;
+    cursor: pointer;
+}
+
+.card:hover img{
+    opacity: 0.1;
+
+}
+
+.card:hover .card-title h3{
+    opacity: 1;
+    color: #56d6b0;
+    text-shadow: 0 0 2rem #56d6b0;
+    
+    font-weight: 300;
+}
+
+.card-pic{
+    display: flex;
+    background-color: rgb(12, 12, 12);
+    height: 85%;
+    width: inherit;
+    overflow: hidden;
+    border-radius: 1rem 1rem 0 0;
+    
+    
+}
+
+.card-pic img{
+   opacity: 0.7;
+   transition: all 0.6s ease;
+   width: 70rem;
+   height: 40rem;
+}
+
+.card-title{
+    display: flex;
+    position: absolute;
+    width: 70rem;
+    height: 15%;
+    top: 85%;
+    justify-content: space-around;
+    align-items: center;
+
+    
+}
+
+.card-title h3{
+    color: white;
+    font-size: 2rem;
+    font-weight: 200;
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.card-desc{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    top: 10%;
+}
+
+.card-desc p{
+    margin: 1rem 2rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: white;
+    opacity: 0.8;
+
+}
+
+.card-desc .desc-p1{
+    transform: translateX(100%);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    transition-delay: 0.1s;
+}
+
+.card:hover .card-desc .desc-p1{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.card-desc .desc-p2{
+    transform: translateX(-100%);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    transition-delay: 0.1s;
+}
+
+.card:hover .card-desc .desc-p2{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.socials{
+    display: flex;
+    position: relative;
+    align-items: center;
+    right: 1rem;
+    top: 32rem;
+    height: 10rem;
+
+    transition: transform 0.5s ease;
+    
+    
+}
+
+.social-links{
+    display: flex;
+    gap: 7rem;
+    list-style: none;
+    
+
+}
+
+.social-links a{
+    text-decoration: none;
+    color: #56d6b0;
+    
+}
+.social-links a:hover{
+    text-shadow: 0px 0px 15px #56d6b0 ;
+    
+    transition: all ease-in-out 0s;
+}
+
+.social-links i{
+    font-size: 3.7rem;
+}
+.social-links i:hover{
+    transition: all ease-in-out 0.1s;
+    scale: 1.1;
+}
+
+.social-link{
+    transition: opacity 1s ease;
+    opacity: 1;
+    
+}
+
+
+.picture{
+    display: flex;
+    position: relative;
+    left: 5rem;
+    padding: 0;
+    margin: 0;
+    top: 10rem;
+    height: 70rem;
+    width: 60rem;
+    transition: all 1s ease;
+    
+    
+}
+
+.picture img{
+    width: 60rem;
+    
+    height: auto;
+}
+
+.description{
+    
+    display: flex;
+    position: relative;
+    top: 23rem;
+    left: 2rem;
+    height: 20rem;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: white; */
+    align-items: center;
+    width: fit-content;
+    
+
+    transition: all 1s ease;
+    
+}
+
+
+.greet{
+    display: flex;
+    align-self: flex-start;
+    position: relative;
+    top: 2rem;
+    left:10rem;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    opacity: 0.8;
+    word-spacing: 0.2rem;
+    transition: all 0.5s ease;
+    
+}
+
+.name{
+    display: flex;
+    position: relative;
+    font-size: 15rem;
+    align-self: center;
+    font-family: "Bai Jamjuree", sans-serif;
+    color: #56d6b0;
+    text-shadow: 0 0 8rem #56d6b0 ;
+    transition: all 0.85s ease;
+}
+
+.desc{
+    display: none;
+    visibility: hidden;
+    width: 50rem;
+    height: fit-content;
+    position: relative;
+    color: white;
+    left: 15rem;
+    bottom: 30rem;
+    flex-direction: column;
+    font-size: 1.5rem;
+    text-wrap: wrap;
+    opacity: 1;
+    transition: all 0.7s ease;
+    overflow: auto;
+}
+
+.word{
+    color: #56d6b0;
+
+}
+
+.desc_2{
+    display: none;
+    visibility: hidden;
+    width: 50rem;
+    position: relative;
+    color: white;
+    left: 15rem;
+    bottom: 33rem;
+    flex-direction: column;
+    font-size: 1.5rem;
+    text-wrap: wrap;
+    opacity: 0;
+    transition: all 0.s ease;
+    overflow: auto;
+    transform: translateY(200%);
+}
+
+.desc_2 table{
+    border-spacing: 2rem ;
+}
+
+.connect_note{
+    font-size: 1rem;
+}
+
+.desc_up{
+    display: none;
+    visibility: hidden;
+    position: relative;
+    bottom: 33rem;
+    left: 10rem;
+    transition: all 0.2s ease;
+    opacity: 0;
+    
+}
+
+.desc_up a{
+    text-decoration: none;
+    color: white;
+    
+    font-size: 2rem;
+
+}
+
+.desc_up a:hover{
+    opacity: 1;
+    transition: all 0.2s ease;
+    text-shadow: 0 0 10px white;
+}
+
+
+.desc_down{
+    display: none;
+    visibility: hidden;
+    position: relative;
+    bottom: 24rem;
+    left: 10rem;
+    transition: all 0.2s ease;
+    opacity: 0;
+    
+    
+}
+
+.desc_down a{
+    text-decoration: none;
+    color: white;
+    
+    font-size: 2rem;
+
+}
+
+.desc_down a:hover{
+    opacity: 1;
+    transition: all 0.2s ease;
+    text-shadow: 0 0 10px white;
+}
