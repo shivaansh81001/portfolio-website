@@ -18,6 +18,11 @@
     <link rel="stylesheet" href="{% static 'website/style.css' %}">
 </head>
 <body>
+    <style>
+        body {
+            background-image: url("{% static 'website/assets/bg_bgmain.png' %}");
+        }
+    </style>
     <div class="wrapper">
         <div class="nav-bar">
             
@@ -25,7 +30,7 @@
             <div class="options">
                 <ul class="nav-options">
                     <li class="link home-btn"><a href="#" onclick="click_home()"><i class="fa-solid fa-house"></i></a></li>
-                    <li class="link resume"><a href="/assets/resume.pdf" rel="noopener noreferrer" target="_blank">RESUME</a></li>
+                    <li class="link resume"><a href="{% static 'website/assets/resume.pdf' %}" rel="noopener noreferrer" target="_blank">RESUME</a></li>
                     <li class="link projects"><a href="#" onclick="click_projects()">PROJECTS</a></li>
                     <li class="link gallery"><a href="#" onclick="click_gallery()">GALLERY</a></li>
                     <li class="link about"><a href="#" onclick="about_click()">ABOUT</a></li>
@@ -43,7 +48,7 @@
             <div class="projects-container">
                 <div class="card" id="stc-mgt" onclick="project_github(this)">
                     <div class="card-pic stock-mngt">
-                        <img src="/assets/stock_management.png" alt="">
+                        <img src="{% static 'website/assets/stock_management.png' %}" alt="">
                     
                     </div>
                     <div class="card-title">
@@ -58,7 +63,7 @@
                 </div>
                 <div class="card " id="git-tab" onclick="project_github(this)">
                     <div class="card-pic github-gen">
-                        <img src="/assets/table_gen.png" alt="">
+                        <img src="{% static 'website/assets/table_gen.png' %}" alt="">
                     </div>
                     <div class="card-title">
                         <h3>GitHub README Table Automation</h3>
@@ -71,7 +76,7 @@
                 </div>
                 <div class="card" id="multi-agent" onclick="project_github(this)">
                     <div class="card-pic agent=pathfinding">
-                        <img src="/assets/mapf.png" alt="">
+                        <img src="{% static 'website/assets/mapf.png' %}" alt="">
                     
                     </div>
                     <div class="card-title">
@@ -86,7 +91,7 @@
                 </div>
                 <div class="card" id="wld-flg" onclick="project_github(this)">
                     <div class="card-pic world-flag">
-                        <img src="/assets/flag_quiz.png" alt="">
+                        <img src="{% static 'website/assets/flag_quiz.png' %}" alt="">
                     </div>
                     <div class="card-title">
                         <h3>Flag Quiz Game</h3>
@@ -99,7 +104,7 @@
                 </div>
                 <div class="card" id="prd-tab" onclick="project_github(this)">
                     <div class="card-pic periodic-table">
-                        <img src="/assets/periodic_table.png" alt="">
+                        <img src="{% static 'website/assets/periodic_table.png' %}" alt="">
                     </div>
                     <div class="card-title">
                         <h3>Periodic Table</h3>
@@ -165,7 +170,7 @@
             </div>
             
             <div class="picture">
-                <img src="/assets/profile_pic.png" alt="pp">
+                <img src="{% static 'website/assets/profile_pic.png' %}" alt="pp">
             </div>     
             
             <div class="socials">
